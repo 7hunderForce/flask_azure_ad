@@ -1,0 +1,21 @@
+﻿<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+See LICENSE in the source repository root for complete license information. -->
+
+{% extends "_Layout.html" %}
+{% block Body %}
+<br />
+<div class="container"> 
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            REST query: <a href="https://developer.microsoft.com/en-us/graph/graph-explorer?request=security/alerts/{{ AlertId }}&method=GET&version={{ Config.SECURITYAPI_VERSION }}&GraphUrl=https://graph.microsoft.com">{{ Config.SECURITYAPI_URL
+             }}alerts/{{ AlertId }}</a>
+        </div>
+        <br> 
+        <div class="panel-body">
+            <pre>
+                {{ Alert }}
+            </pre>
+        </div>
+    </div>
+</div>
+{% endblock %}
